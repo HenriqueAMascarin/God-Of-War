@@ -16,8 +16,8 @@ function App() {
         <InfoSection/>
         <EnemySection/>
         <BuySection/>
-        <Footer/>
       </main>
+      <Footer/>
     </>
   )
 }
