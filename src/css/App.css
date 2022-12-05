@@ -27,5 +27,55 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
+#header{
+  height: 90px;
+  max-width: 100%;
+  position: relative;
+  z-index: 1;
+}
+.flexHeader{
+  display: inline-flex;
+  align-items: center;
+  justify-content: left;
+  flex-flow: row nowrap;
+  height: 100%;
+  width: 100%;
+  border-radius: 0 0 14px 14px;
+  background-color: white;
+  box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+}
+.blades{
+  height: 100%;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: fit-content;
+  width: 90px;
+}
+.blades img{
+  width: 54px;
+}
+.blades img:nth-child(1){
+  transform: rotateY(190deg);
+}
+.blades img:nth-child(2){
+  position: relative;
+  right: 24px;
+}
+.cartSvg{
+  width: 50px;
+}
+.cartSvg path{
+  fill: #4094DA;
+}
+.mainNav{
+  position: absolute;
+  display: none;
+}
+.logo{
+  width: 160px;
+  filter: drop-shadow(0px 0px 0 rgb(255, 255, 255))
+          drop-shadow(-0.6px 1px 0 rgb(255, 255, 255))
+          drop-shadow(-0.7px 1px 0px rgba(0,0,0, 0.50));
+  margin: 0 10px 0 auto;
+}
