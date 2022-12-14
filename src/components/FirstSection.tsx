@@ -13,6 +13,7 @@ export default function FirstSection(){
                         <iframe src="https://www.youtube.com/embed/Fg_Cj7BJ1fY" title="O Que É... GOD OF WAR RAGNAROK!?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                     </div>
                 </div>
+                
                 <span className="changeBtn"></span>
             </div>
         </section>
