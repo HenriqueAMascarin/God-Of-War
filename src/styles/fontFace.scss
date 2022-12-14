@@ -1,0 +1,39 @@
+body {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  src: url(../assets/fonts/Inter-Bold.ttf);
+  font-family: 'inter';
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url(../assets/fonts/Inter-Regular.ttf);
+  font-family: 'inter';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  src: url(../assets/fonts/Inter-ExtraLight.ttf);
+  font-family: 'inter';
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Font god of war */
+@font-face {
+  src: url(../assets/fonts/Berserker-Regular.ttf);
+  font-family: 'berserker';
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,62 @@
+#header{
+    height: 70px;
+    max-width: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.flexHeader{
+    display: inline-flex;
+    align-items: center;
+    justify-content: left;
+    flex-flow: row nowrap;
+    height: 90px;
+    width: 100%;
+    border-radius: 0 0 14px 14px;
+    background-color: white;
+    box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+}
+.blades{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: fit-content;
+    width: 90px;
+    
+    img{
+       width: 54px; 
+    }
+
+    img:nth-child(1){
+        transform: rotateY(190deg);
+    }
+
+    img:nth-child(2){
+        position: relative;
+        right: 24px;
+    }
+}
+.cartSvg{
+    width: 58px;
+    filter: drop-shadow(0px 0px 3px rgba(0,0,0, 0.50));
+    
+    path{
+        fill: #4094DA;
+    }
+}
+
+.mainNav{
+    position: absolute;
+    display: none;
+}
+
+.a-logo{
+    margin: 0 10px 0 auto;
+}
+.logo{
+    width: 160px;
+    filter: drop-shadow(0px 0px 0 rgb(255, 255, 255))
+            drop-shadow(-0.6px 1px 0 rgb(255, 255, 255))
+            drop-shadow(-0.7px 1px 0px rgba(0,0,0, 0.50));
+}
