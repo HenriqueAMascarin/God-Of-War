@@ -4,7 +4,7 @@ import kratos from '../assets/images/kratos.png'
 export default function InfoSection(){
     return(
         <section>
-            <img src={boat} alt="Kratos e Atreus de barco olhando para esquerda" />
+            <img src={boat} alt="Kratos e Atreus de barco olhando para direita" />
             <div>
                 <h1>Embarque com Kratos e Atreus em uma jornada épica emocionante 
                 sobre apego e superação
