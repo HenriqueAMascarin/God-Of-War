@@ -1,0 +1,55 @@
+.kratosBoat{
+    background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../assets/images/boat.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 320px;
+}
+
+.info-godOfWar{
+    background-color: #1E1E1E;
+    color: white;
+    padding: 30px 30px 60px;
+
+    h1{
+        font-size: 24px;
+        font-family: inter ,sans-serif;
+        font-weight: 400;
+        text-shadow: 0 0 8px #31618A;
+        margin: 0 0 30px;
+    }
+
+    p{
+        font-family: inter ,sans-serif;
+        font-size: 18px;
+        font-weight: 200;
+        text-shadow: 0 0 8px #31618A;
+    }
+}
+
+.enemySection{
+    position: relative;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    z-index: hidden;
+
+    h2{
+        position: absolute;
+        color: white;
+        z-index: 1;
+        font-size: 40px;
+        text-shadow: 0 0 8px #31618A;
+        text-align: center;
+        padding: 0 10px;
+    }
+    .kratosEnemy{
+        background: linear-gradient(to bottom, #1E1E1E , transparent 10%, transparent 90%, #1E1E1E), url(../assets/images/kratos.png);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        padding: 50%;
+        filter: brightness(0.7)
+    }
+}
