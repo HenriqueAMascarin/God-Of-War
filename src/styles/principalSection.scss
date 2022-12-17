@@ -1,10 +1,10 @@
 .principalImg{
     background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../assets/images/principalGame.jpg);
     background-position: center top;
-    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 500px;
+    padding: 50%;
+    height: 540px;
 }
 
 .carouselSection{
