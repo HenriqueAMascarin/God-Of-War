@@ -1,0 +1,54 @@
+.buySectionDiv{
+    background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.10),rgba(0,0,0,0.10)) ,linear-gradient(to bottom, #151213, transparent 60% ,transparent 80%, #316087 96%), url(../assets/images/axe.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .card{
+        background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
+        max-width: 400px;
+        border-radius: 10px 10px 4px 4px;
+        margin: 70px 30px 20px;
+        color: white;
+        display: inline-flex;
+        flex-direction: column;
+        box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
+    
+        .imgCard{
+            border-radius: 10px 10px 0 0;
+        }
+
+        .mainCard{
+            padding: 0 20px;
+        }
+        h3{
+            font-size: 32px;
+            text-align: center;
+        }
+        
+        ul{
+            display: inline-block;
+            font-size: 16px;
+            margin: 20px 0;
+            list-style-position: inside;
+        }
+
+        .priceText{
+            font-size: 20px;
+        }
+        .buyButton{
+            width: 100%;
+            background-color: #4293DD;
+            color: white;
+            border-radius: 20px;
+            margin-bottom: 20px;
+            border: 0;
+            font-size: 25px;
+            padding: 0 14px;
+        }
+    }
+}
