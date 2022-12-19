@@ -45,9 +45,15 @@ export default function BuySection(){
 
             </div>
 
-            <div>
-                <a href="https://youtu.be/6fNUO23I_BA?list=PLH9fqbYeMD3PekQX9N7clbjR4lKyNk6_C" target="_blank" >Desbrave as terras nórdicas</a>
-                <img src={gameplay} alt="Imagem de gameplay do youtuber Brksedu" />
+            <div className="gameplaySection">
+                <div className="divGameplay">
+                    <a href="https://youtu.be/6fNUO23I_BA?list=PLH9fqbYeMD3PekQX9N7clbjR4lKyNk6_C" target="_blank" >Desbrave as terras nórdicas</a>
+                    <div className="fatherFilter">
+                        <div className="gameplayFilter"></div>
+                        <img src={gameplay} alt="Imagem de gameplay do youtuber Brksedu" />
+                    </div>  
+                    
+                </div>
             </div>
 
         </section>

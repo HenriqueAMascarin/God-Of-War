@@ -54,3 +54,48 @@
         }
     }
 }
+
+.gameplaySection{
+    background: linear-gradient(to bottom, #2C5679 ,#2C5679 50%, white);
+    padding: 40px $marginSite 80px;
+
+    .divGameplay{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    a{
+        position: absolute;
+        padding: 10px 6px;
+        z-index: 2;
+        font-size: clamp(22px, 5vw, 60px);
+        background-image: linear-gradient(to bottom, #264660, white);
+        font-family: berserker, sans-serif;
+        text-decoration: none;
+        color: white;
+        border-radius: 30px;
+        text-shadow: 0 2px rgba(0, 0, 0, 0.50);
+        text-align: center;
+        display: block;
+        max-width: 80%;
+    }
+
+    .fatherFilter{
+        position: relative;
+    }
+    .gameplayFilter{
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 100%;
+        z-index: 1;
+        background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.40),rgba(0,0,0,0.40)) ,linear-gradient(to bottom, rgba(0,0,0, 0) 60%, rgba(255, 255, 255, 0.4));
+        border-radius: 7px;
+    }
+
+    img{
+        border-radius: 7px;
+        box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
+    }
+}
