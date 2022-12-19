@@ -1,3 +1,5 @@
+@import "utils.scss";
+
 .buySectionDiv{
     background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.10),rgba(0,0,0,0.10)) ,linear-gradient(to bottom, #151213, transparent 60% ,transparent 80%, #316087 96%), url(../assets/images/axe.jpg);
     background-position: center;
@@ -12,7 +14,7 @@
         background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
         max-width: 400px;
         border-radius: 10px 10px 4px 4px;
-        margin: 70px 30px 20px;
+        margin: 70px $marginSite 20px;
         color: white;
         display: inline-flex;
         flex-direction: column;
