@@ -1,4 +1,3 @@
-import principalImg from '../assets/images/principalGame.jpg';
 import kratosAtreus from '../assets/images/principalGame.jpg';
 
 export default function FirstSection(){

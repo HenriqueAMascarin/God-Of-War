@@ -3,7 +3,7 @@ import gameplay from "../assets/images/gameplay.png"
 
 export default function BuySection(){
     return(
-        <section>
+        <section id="buySection">
             
             <div className="buySectionDiv">
                 
