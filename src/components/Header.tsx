@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import bladeChaos from '../assets/images/chaosSword.webp';
 import logo from '../assets/images/logo.webp';
 
 
 export default function Header(){
+    //manipulação de estado
     let [headerActive, changeActive] = useState<boolean>(false); //esse boolean seria o tipo do headerActive
 
     //tipos da array 
@@ -16,7 +17,7 @@ export default function Header(){
     const liArr: arr = [
         {
             name: "Ínicio",
-            href: "#header",
+            href: "#firstSection",
         },
         {
             name: "Sobre",
@@ -36,27 +37,30 @@ export default function Header(){
     }
 
 
-    //Isso aqui tudo estava arrumando para fazer adicionar uma classe no header quando desse o scroll abaixo
-    let fixedHeader: Element | null;
-    useEffect(()=>{
-        fixedHeader = document.querySelector(".fixedHeader");
-    })
+    //parte de funcionalidade do header ir e voltar
+    let header: Element | null = document.querySelector(".headerClass");
+    let oldScroll:number;
+    let i:number = 0;
 
-    useEffect(()=>{
-        window.addEventListener("scroll", () =>{
-            
-            // if(fixedHeader?.classList.contains("close")){
-            //     fixedHeader?.classList.remove("close");
-            // }
-            // if(!fixedHeader?.classList.contains("close")){
-            //     fixedHeader?.classList.add("close");
-            // }
-        })
-    })
+    window.addEventListener("scroll", headerScroll);
     
+    function headerScroll(){
+        
+        if(!header){
+            header = document.querySelector(".headerClass");
+        }
+        
+        if( (window.scrollY > 60) && (!(header?.classList.contains("close"))) && ((window.scrollY > oldScroll)) ){
+            header?.classList.add("close");
+        }else if( (window.scrollY < 50) && (header?.classList.contains("close")) || (window.scrollY < oldScroll) && (header?.       classList.contains("close")) ){
+            header?.classList.remove("close"); 
+        }            
 
+        oldScroll = window.scrollY;
+    }
+        
     return(
-        <header id='header' className={headerActive? "active" : ""}>
+        <header id='header' className={headerActive? "active headerClass" : "headerClass"}>
             <div className='fixedHeader'>
                 <div className='flexHeader'>
                     <div className='marginHeader'>
@@ -79,7 +83,7 @@ export default function Header(){
                                 )}
                             </ul>
                         </nav>
-                        <a href="#header" className='a-logo hover'>
+                        <a href={"#firstSection"} className='a-logo hover'>
                             <img src={logo} alt="God of War logo" className='logo' />
                         </a>
                     </div>
