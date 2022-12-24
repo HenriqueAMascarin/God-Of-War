@@ -1,46 +1,66 @@
+@import "utils.scss";
+
 #header{
     height: 70px;
-    max-width: 100%;
-    position: relative;
-    z-index: 1;
+    width: 100%;
+}
+.fixedHeader{
+    position: fixed;
+    z-index: 2;
+    height: 70px;
+    width: 100%;
+}
+.marginHeader{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: row nowrap;
+    max-width: $maxwidthcell;
+    width: 100%;
+    height: $headerHeight;
+    padding: 0 $marginSite;
 }
 
 .flexHeader{
-    display: inline-flex;
-    align-items: center;
-    justify-content: left;
-    flex-flow: row nowrap;
-    height: 90px;
-    width: 100%;
+    height: $headerHeight;
     border-radius: 0 0 14px 14px;
     background-color: white;
     box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative;
 }
+
 .blades{
     height: 100%;
     display: flex;
     align-items: center;
-    position: relative;
-    width: fit-content;
-    width: 90px;
-    filter: drop-shadow(0px 0px 2px rgba(0,0,0, 0.7));
-    
+    width: 64px;
+    filter: drop-shadow(1px 0px 0px rgba(255, 255, 255, 1))
+            drop-shadow(-1px 0px 0px rgba(255, 255, 255, 0.7))
+            drop-shadow(1px 0px 2px rgba(0,0,0, 0.3))
+            drop-shadow(-1px 0px 2px rgba(0,0,0, 0.3));
+    transition: all .2s ease-in-out;
+    cursor: pointer;
+            
     img{
        width: 54px;
+       transition: all .2s ease-in-out;
     }
 
     img:nth-child(1){
-        transform: rotateY(190deg);
+        transform: rotateY(180deg) translateX(14px);
     }
 
     img:nth-child(2){
-        position: relative;
-        right: 24px;
+        transform: translateX(-34px);
     }
 }
 .cartSvg{
     width: 58px;
     filter: drop-shadow(0px 0px 2px rgba(0,0,0, 0.7));
+    margin-left: 5px;
     
     path{
         fill: #4094DA;
@@ -49,15 +69,76 @@
 
 .mainNav{
     position: absolute;
-    display: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 98%;
+    z-index: -1;
+    background-image: linear-gradient(to bottom, white 20%, #264660);
+    border-radius: 0 0 14px 14px;
+    transition: all .4s ease-in-out;
+    padding: 36px 0 10px;
+    transform: translateY(-100%);
+
+    ul{
+        background-image: linear-gradient(to bottom, #4094DA, white);
+        background-clip: text;
+        -webkit-background-clip: text;
+        filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));
+        width: 100%;        
+
+        li{
+            list-style: none;
+            text-align: center;
+            font-weight: bold;
+            text-transform: uppercase;
+            
+            
+            a{
+                text-decoration: none;
+                color: transparent;
+                display: block;
+                font-size: 28px;
+                transition: all .3s ease-in-out;
+
+                &:hover{
+                    font-size: calc(28px + 4px);
+                }
+            }
+        }
+    }
+
 }
 
 .a-logo{
-    margin: 0 10px 0 auto;
+    margin-left: auto;
 }
 .logo{
     width: clamp(140px,54vw,260px);
     filter: drop-shadow(0px 0px 0 rgba(255, 255, 255, 1))
             drop-shadow(-0.6px 1px 0 rgba(255, 255, 255,0.5))
             drop-shadow(-0.7px 1px 0px rgba(0,0,0, 0.50));
+}
+
+.active{
+    .mainNav{
+        transform: translateY(calc($headerHeight + 20px) );
+    }
+
+    .blades{
+        filter: drop-shadow(1px 0px 0px rgba(255, 255, 255, 1))
+            drop-shadow(-1px 0px 0px rgba(255, 255, 255, 1))
+            drop-shadow(2px 0px 3px rgba(66, 147, 221, 0.7))
+            drop-shadow(-2px 0px 3px rgba(66, 147, 221, 0.7));
+
+        img:nth-child(1){
+            transform: translateX(0px) rotateY(180deg) rotateZ(-30deg);
+            position: relative;
+        }
+    
+        img:nth-child(2){
+            transform: translateX(-50px) rotateZ(-30deg);
+            position: relative;
+        }
+    }
 }

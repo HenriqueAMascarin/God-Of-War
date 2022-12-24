@@ -4,7 +4,7 @@ import kratosBoat from "../assets/images/boat.jpg";
 
 export default function InfoSection(){
     return(
-        <section>
+        <section id='infoSection'>
             <img src={kratosBoat} alt="Kratos e Atreus de barco olhando para direita" className='kratosBoat'/>
             
             <div className='info-godOfWar'>
