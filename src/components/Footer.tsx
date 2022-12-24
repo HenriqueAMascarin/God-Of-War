@@ -22,7 +22,7 @@ export default function Footer(){
                             </svg>
                         </a>
                     </div>
-                    <a href="#main" className='linkLogo-footer'>
+                    <a href={"#firstSection"} className='linkLogo-footer'>
                         <img src={logo} alt="God of war: Ragnarok logotipo" className='logo'/>
                     </a>
                 </div>

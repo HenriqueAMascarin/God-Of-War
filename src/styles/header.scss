@@ -1,15 +1,24 @@
 @import "utils.scss";
 
-#header{
-    height: 70px;
-    width: 100%;
-}
-.fixedHeader{
+.headerClass{
     position: fixed;
     z-index: 2;
     height: 70px;
     width: 100%;
+    transition: $maintrasition;
 }
+
+.close .fixedHeader{
+    transform: translateY(calc(100% - 400px));
+}
+
+.fixedHeader{
+    position: fixed;
+    height: $headerHeight;
+    width: 100%;
+    transition: $maintrasition;
+}
+
 .marginHeader{
     display: flex;
     align-items: center;
@@ -17,12 +26,12 @@
     flex-flow: row nowrap;
     max-width: $maxwidthcell;
     width: 100%;
-    height: $headerHeight;
+    height: 100%;
     padding: 0 $marginSite;
 }
 
 .flexHeader{
-    height: $headerHeight;
+    height: 100%;
     border-radius: 0 0 14px 14px;
     background-color: white;
     box-shadow: 0 4px 4px rgba(0,0,0, 0.25);
@@ -76,7 +85,7 @@
     z-index: -1;
     background-image: linear-gradient(to bottom, white 20%, #264660);
     border-radius: 0 0 14px 14px;
-    transition: all .4s ease-in-out;
+    transition: $maintrasition;
     padding: 36px 0 10px;
     transform: translateY(-100%);
 

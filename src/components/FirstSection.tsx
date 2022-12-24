@@ -2,7 +2,7 @@ import kratosAtreus from '../assets/images/principalGame.jpg';
 
 export default function FirstSection(){
     return(
-        <section>
+        <section id='firstSection'>
             <img src={kratosAtreus} alt="Kratos e Atreus contra Valquíria" className="principalImg"/>
 
             <div className='carouselSection'>
