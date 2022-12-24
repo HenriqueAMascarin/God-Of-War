@@ -43,7 +43,7 @@ export default function Header(){
     let i:number = 0;
 
     window.addEventListener("scroll", headerScroll);
-    
+
     function headerScroll(){
         
         if(!header){
@@ -52,7 +52,7 @@ export default function Header(){
         
         if( (window.scrollY > 60) && (!(header?.classList.contains("close"))) && ((window.scrollY > oldScroll)) ){
             header?.classList.add("close");
-        }else if( (window.scrollY < 50) && (header?.classList.contains("close")) || (window.scrollY < oldScroll) && (header?.       classList.contains("close")) ){
+        }else if( (window.scrollY < 50) && (header?.classList.contains("close")) || (window.scrollY < oldScroll) && (header?.classList.contains("close")) ){
             header?.classList.remove("close"); 
         }            
 
