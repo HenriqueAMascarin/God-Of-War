@@ -56,7 +56,10 @@ export default function Header(){
             header?.classList.remove("close"); 
         }            
 
-        oldScroll = window.scrollY;
+        setTimeout(() => {
+            oldScroll = window.scrollY;
+        }, 100);
+        
     }
         
     return(
