@@ -9,7 +9,10 @@ export default function FirstSection(){
             father: "#firstSection",
             carouselObject: ".iframesCarousel",
             items: "iframe",
-            buttonClass: ".changeBtn"});
+            buttonClass: ".changeBtn",
+            initialItem: 1, 
+            // initial 0-max
+        });
     }, []);
     
 

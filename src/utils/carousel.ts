@@ -3,51 +3,42 @@ type carousel = {
     carouselObject: string,
     items: string,
     buttonClass: string,
+    initialItem: number,
 }
 
-export default function carousel({father,carouselObject, items, buttonClass}:carousel){
+export default function carousel({father,carouselObject, items, buttonClass, initialItem}:carousel){
     const carouselItems = document.querySelectorAll(father + " " + carouselObject + " " + items);
     const carousel = document.querySelector(father + " " + carouselObject) as HTMLElement;
     const buttons = document.querySelectorAll(father + " " + buttonClass);
-
-    let currentIndex = 1;
     
     buttons[0].addEventListener("click", negativePos);
     buttons[1].addEventListener("click", positivePos);
 
     function negativePos(){
-        currentIndex--;
-        getPosition("left");
+        initialItem--;
+        getPosition();
     }
     
     function positivePos(){
-        currentIndex++;
-        getPosition("right");
+        initialItem++;
+        getPosition();
     }
 
-    function getPosition(direction:string){
-        if(currentIndex === -1){
-            currentIndex = carouselItems.length - 1;
+    function getPosition(){
+        if(initialItem === -1){
+            initialItem = carouselItems.length - 1;
         }
 
-        let moveCurrent = Math.abs(currentIndex) % carouselItems.length;
-        setPos(moveCurrent, direction);
+        let moveCurrent = Math.abs(initialItem) % carouselItems.length;
+        setPos(moveCurrent);
     }
 
     let lastItem:number;
     let currentSize:number = 0;
-    function setPos(moveCurrent:number, direction:string){
-        let sizeItem = carouselItems[0].clientWidth + 30;
+    function setPos(moveCurrent:number){
+        let sizeItem = carouselItems[0].clientWidth;
 
-        if(lastItem === (carouselItems.length - 1) && moveCurrent === 0){
-            currentSize = sizeItem;
-        }else if(lastItem === 0 && moveCurrent === (carouselItems.length - 1)){
-            currentSize = -(sizeItem * (carouselItems.length - 2));
-        }else if(direction === "left"){
-            currentSize += sizeItem;
-        }else if(direction === "right"){
-            currentSize -= sizeItem;
-        }
+        currentSize = -(sizeItem * moveCurrent);
         
         lastItem = moveCurrent;
         styleItems(currentSize);
@@ -56,5 +47,6 @@ export default function carousel({father,carouselObject, items, buttonClass}:car
     function styleItems(currentSize:number){
         carousel.style.transform = "translateX("+ currentSize + "px)";
     }
-    
+
+    getPosition()
 }
