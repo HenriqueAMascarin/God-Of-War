@@ -1,6 +1,18 @@
+import { useEffect } from 'react';
 import kratosAtreus from '../assets/images/principalGame.jpg';
+import carousel from '../utils/carousel';
 
 export default function FirstSection(){
+
+    useEffect(()=>{
+        carousel({
+            father: "#firstSection",
+            carouselObject: ".iframesCarousel",
+            items: "iframe",
+            buttonClass: ".changeBtn"});
+    }, []);
+    
+
     return(
         <section id='firstSection'>
             <img src={kratosAtreus} alt="Kratos e Atreus contra Valquíria" className="principalImg"/>
@@ -8,9 +20,9 @@ export default function FirstSection(){
             <div className='carouselSection'>
                 <div className='carousel'>
                     <div className='iframesCarousel'>
-                        <iframe src="https://www.youtube.com/embed/x6oF3Jxu7X0" title="God Of War Ragnarok - Trailer de Revelação do PlayStation Showcase 2021 | PS5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/0N4J-7gsaGc" title="God of War Ragnarök - Trailer Cinematográfico: Pai e Filho | PS5, PS4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
-                        <iframe src="https://www.youtube.com/embed/Fg_Cj7BJ1fY" title="O Que É... GOD OF WAR RAGNAROK!?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
+                        <iframe src="https://www.youtube.com/embed/x6oF3Jxu7X0" title="God Of War Ragnarok - Trailer de Revelação do PlayStation Showcase 2021 | PS5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading='lazy'></iframe>
+                        <iframe src="https://www.youtube.com/embed/0N4J-7gsaGc" title="God of War Ragnarök - Trailer Cinematográfico: Pai e Filho | PS5, PS4" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading='lazy'></iframe>
+                        <iframe src="https://www.youtube.com/embed/Fg_Cj7BJ1fY" title="O Que É... GOD OF WAR RAGNAROK!?" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen loading='lazy'></iframe>
                     </div>
                 </div>
                 <div className="buttons">
