@@ -5,11 +5,16 @@ import carousel from '../utils/carousel';
 export default function FirstSection(){
 
     useEffect(()=>{
+
         carousel({
             father: "#firstSection",
             carouselObject: ".iframesCarousel",
             items: "iframe",
-            buttonClass: ".changeBtn"});
+            buttonClass: ".changeBtn",
+            initialItem: 1, // initial 0-max
+            leftGap: 30, 
+        });
+
     }, []);
     
 

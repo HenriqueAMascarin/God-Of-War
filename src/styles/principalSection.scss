@@ -1,4 +1,6 @@
 @import "utils.scss";
+$widthVideo: clamp(250px, 50vw, 500px);
+$heigthVideo: clamp(200px, 50vw, 240px);
 
 .principalImg{
     background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../assets/images/principalGame.jpg);
@@ -16,29 +18,36 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
+    overflow: hidden;
 
     .carousel{
         display: flex;
         align-items: center;
+        overflow: hidden;
         justify-content: center;
         overflow: hidden;
     }
 
     .iframesCarousel{
-        display: inline-flex;
+        display: flex;
         gap: 30px;
-        align-items: center;
-        justify-content: center;
         flex-grow: 0;
         flex-shrink: 0;
-        margin: 60px 0 60px;
+        margin: 60px 0 60px calc($widthVideo * 2 + 60px);
         transition: $maintrasition;
-    
+        
+        .active{
+            box-shadow: 0 0 14px #4094DA;
+            transform: scale(1.02);
+        }
+
         iframe{
             border-radius: 7px;
-            width: clamp(250px, 50vw, 500px);
-            height: clamp(200px, 30vw, 240px);
+            width: $widthVideo;
+            height: $heigthVideo;
             filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 1));
+            transition: $maintrasition;
         }
     }
     
