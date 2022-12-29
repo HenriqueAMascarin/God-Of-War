@@ -52,11 +52,11 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
         carouselItems[moveCurrent].classList.add(classActive);
 
         carousel.style.transform = "translateX("+ currentSize + "px)";
-        
     }
 
     getPosition();
     
+    //resize fix
     let windowOld = window.innerWidth;
     function resizeDo(){
         if(window.innerWidth !== windowOld){
