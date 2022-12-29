@@ -15,11 +15,8 @@ export default function InfoSection(){
                 </p>
             </div>
 
-            <article>
-                <div className='enemySection'>
+            <article className='articleEnemy'>
                     <h2>Enfrente Inimigos Poderosos!</h2>
-                    <img src={kratos} alt="Kratos enfrentando um lobo gigante" className='kratosEnemy'/>
-                </div>
             </article>
         </section>
     )

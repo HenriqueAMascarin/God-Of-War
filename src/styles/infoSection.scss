@@ -31,26 +31,28 @@
     }
 }
 
-.enemySection{
-    position: relative;
-    align-items: center;
+.articleEnemy{
+    background: repeating-linear-gradient(to top, rgba(0,0,0,0.25),rgba(0,0,0,0.25)) ,linear-gradient(to bottom, #1E1E1E , transparent 10%, transparent 90%, #1E1E1E), url(../assets/images/kratos.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
     display: flex;
     justify-content: center;
-    z-index: hidden;
+    align-items: center;
+    position: relative;
+    min-height: 300px;
+    padding: 0px $marginSite;
 
     h2{
-        position: absolute;
+        position: relative;
         color: white;
-        font-size: 40px;
-        text-shadow: 0 0 8px #31618A;
+        font-size: clamp(3em, 15vw, 8em);
+        text-shadow: -2px -1px 3px #31618A,
+                    2px -1px 3px #31618A,
+                    -3px -1px 3px #000000,
+                    3px -1px 3px #000000;
         text-align: center;
-        padding: 0 $marginSite;
-    }
-    .kratosEnemy{
-        background: repeating-linear-gradient(to top, rgba(0,0,0,0.25),rgba(0,0,0,0.25)) ,linear-gradient(to bottom, #1E1E1E , transparent 10%, transparent 90%, #1E1E1E), url(../assets/images/kratos.png);
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        padding: 50%;
+        padding: 50px 0;
     }
 }
