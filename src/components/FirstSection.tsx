@@ -13,6 +13,7 @@ export default function FirstSection(){
             buttonClass: ".changeBtn",
             initialItem: 1, // initial 0-max
             leftGap: 30, 
+            classActive: "active",
         });
 
     }, []);

@@ -5,9 +5,10 @@ type carousel = {
     buttonClass: string,
     initialItem: number,
     leftGap: number,
+    classActive: string,
 }
 
-export default function carousel({father,carouselObject, items, buttonClass, initialItem, leftGap}:carousel){
+export default function carousel({father,carouselObject, items, buttonClass, initialItem, leftGap, classActive}:carousel){
     const carouselItems = document.querySelectorAll(father + " " + carouselObject + " " + items);
     const carousel = document.querySelector(father + " " + carouselObject) as HTMLElement;
     const buttons = document.querySelectorAll(father + " " + buttonClass);
@@ -46,22 +47,28 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
    
     function styleItems(currentSize:number, moveCurrent:number){
         carouselItems.forEach((e) =>{
-            e.classList.remove("active");
+            e.classList.remove(classActive);
         })
-        carouselItems[moveCurrent].classList.add("active");
+        carouselItems[moveCurrent].classList.add(classActive);
 
         carousel.style.transform = "translateX("+ currentSize + "px)";
         
     }
 
     getPosition();
+    
     let windowOld = window.innerWidth;
-
-    window.addEventListener("resize", () =>{
-        if(window.innerWidth != windowOld){
+    function resizeDo(){
+        if(window.innerWidth !== windowOld){
             getPosition();
             windowOld = window.innerWidth;
         }
+    }
+
+    let time: number;
+    window.addEventListener("resize", () =>{
+        clearTimeout(time);
+        time = setTimeout(resizeDo, 400);
     })
     
 }
