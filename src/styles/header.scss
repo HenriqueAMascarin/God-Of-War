@@ -102,21 +102,18 @@
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-
+            
             a{
                 text-decoration: none;
                 color: transparent;
                 display: block;
                 font-size: 1.8em;
                 transition: all .3s ease-in-out;
-                -webkit-background-clip: text;
-                background-clip: text;
 
+                    &:hover{
+                        color: blanchedalmond;
+                    }   
                 
-
-                a:hover{
-
-                }
             }
         }
     }
