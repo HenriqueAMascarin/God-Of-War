@@ -66,6 +66,7 @@
         transform: translateX(-34px);
     }
 }
+
 .cartSvg{
     width: 58px;
     filter: drop-shadow(1px 0px 2px rgba(0,0,0, 0.3))
@@ -79,10 +80,9 @@
 
 .mainNav{
     position: absolute;
-    display: flex;
+    display: inline-flex;
     align-items: center;
-    justify-content: center;
-    width: 98%;
+    width: 90%;
     z-index: -1;
     background-image: linear-gradient(to bottom, white 20%, #264660);
     border-radius: 0 0 14px 14px;
@@ -94,25 +94,28 @@
         background-image: linear-gradient(to bottom, #4094DA, white);
         background-clip: text;
         -webkit-background-clip: text;
-        filter: drop-shadow(0px 0px 3px rgb(0, 0, 0));
+        filter: drop-shadow(0px 0px 1px rgb(0, 0, 0))
+                drop-shadow(0px 0px 4px rgb(92, 92, 92));
         width: 100%;        
-
         li{
             list-style: none;
             text-align: center;
             font-weight: bold;
             text-transform: uppercase;
-            
-            
+
             a{
                 text-decoration: none;
                 color: transparent;
                 display: block;
-                font-size: 28px;
+                font-size: 1.8em;
                 transition: all .3s ease-in-out;
+                -webkit-background-clip: text;
+                background-clip: text;
 
-                &:hover{
-                    font-size: calc(28px + 4px);
+                
+
+                a:hover{
+
                 }
             }
         }
@@ -150,6 +153,47 @@
         img:nth-child(2){
             transform: translateX(-50px) rotateZ(-30deg);
             position: relative;
+        }
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .blades{
+        display: none;
+    }
+    .active{
+        .mainNav{
+            transform: translate(0);
+        }
+    }
+    .mainNav{
+        position: relative;
+        z-index: 0;
+        background-image: linear-gradient(to top, transparent, transparent);
+        justify-content: flex-start;
+        width: fit-content;
+        margin-left: auto;
+        padding: 0;
+        transform: translate(0);
+        height: 100%;
+        
+
+        ul{
+            display: inline-flex;
+            background-image: linear-gradient(to right, #4094DA, white);
+            height: 100%;
+            li{
+                display: block;
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    font-size: 2.5em;
+                    padding: 0 10px;
+                    height: 100%;
+                }
+            }
+            
         }
     }
 }

@@ -1,14 +1,13 @@
 @import "utils.scss";
-$widthVideo: clamp(250px, 50vw, 500px);
-$heigthVideo: clamp(200px, 50vw, 240px);
+$widthVideo: clamp(250px, 50vw, 380px);
+$heigthVideo: clamp(200px, 50vw, 200px);
 
 .principalImg{
     background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../assets/images/principalGame.jpg);
-    background-position: bottom center;
+    background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    padding: 50%;
-    height: 560px;
+    height: clamp(500px, 60vw, 600px);
 }
 
 .carouselSection{

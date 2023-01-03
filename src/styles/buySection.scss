@@ -129,20 +129,22 @@ $sizeCard: clamp(250px, 90vw, 400px);
         position: absolute;
         padding: 10px 6px;
         z-index: 2;
-        font-size: clamp(22px, 5vw, 60px);
+        font-size: clamp(1.5em, 5vw, 3em);
         background-image: linear-gradient(to bottom, #264660, white);
-        font-family: berserker, sans-serif;
         text-decoration: none;
         color: white;
         border-radius: 30px;
         text-shadow: 0 2px rgba(0, 0, 0, 0.50);
         text-align: center;
-        display: block;
-        max-width: 80%;
+        width: 90%;
     }
 
     .fatherFilter{
         position: relative;
+        max-width: 700px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     .gameplayFilter{
         position: absolute;

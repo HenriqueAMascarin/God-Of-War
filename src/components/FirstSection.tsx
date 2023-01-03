@@ -21,7 +21,7 @@ export default function FirstSection(){
 
     return(
         <section id='firstSection'>
-            <img src={kratosAtreus} alt="Kratos e Atreus contra Valquíria" className="principalImg"/>
+            <div aria-label="Kratos e Atreus contra Valquíria" className="principalImg"></div>
 
             <div className='carouselSection'>
                 <div className='carousel'>
