@@ -1,5 +1,5 @@
 @import "utils.scss";
-$sizeCard: clamp(250px, 90vw, 400px);
+$sizeCard: clamp(250px, 90vw, 340px);
 
 .buySectionDiv{
     background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.10),rgba(0,0,0,0.10)) ,linear-gradient(to bottom, #151213, transparent 60% ,transparent 80%, #316087 96%), url(../assets/images/axe.jpg);
@@ -15,7 +15,7 @@ $sizeCard: clamp(250px, 90vw, 400px);
 
     .titleBuy{
         font-size: clamp(2.4em, 10vw, 3.6em);
-        margin-top: 80px;
+        margin-top: 30px;
         text-align: center;
         text-shadow: -3px 2px 4px rgb(0, 0, 0),
                     -2px 1px 4px rgb(0, 0, 0),
@@ -38,7 +38,6 @@ $sizeCard: clamp(250px, 90vw, 400px);
                     3px 1px 4px rgb(0, 0, 0);
     }
 
-
     .carousel{
         display: flex;
         align-items: center;
@@ -53,13 +52,13 @@ $sizeCard: clamp(250px, 90vw, 400px);
         flex-grow: 0;
         flex-shrink: 0;
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
-        transition: $maintrasition;
-        
+        transition: $mainTransition;
+
         .active{
             box-shadow: 0 0 14px #4094DA;
             transform: scale(1.02);
         }
-    
+
         .card{
             background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
             width: $sizeCard;
@@ -68,7 +67,7 @@ $sizeCard: clamp(250px, 90vw, 400px);
             display: inline-flex;
             flex-direction: column;
             box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
-            transition: $maintrasition;
+            transition: $mainTransition;
         
             .imgCard{
                 border-radius: 10px 10px 0 0;
@@ -84,6 +83,7 @@ $sizeCard: clamp(250px, 90vw, 400px);
             h3{
                 font-size: 32px;
                 align-self: center;
+                text-align: center;
             }
             
             ul{
@@ -107,7 +107,7 @@ $sizeCard: clamp(250px, 90vw, 400px);
                 border-radius: 20px;
                 margin-bottom: 20px;
                 border: 0;
-                font-size: 25px;
+                font-size: 1.5em;
                 padding: 0 14px;
                 cursor: pointer;
             }
@@ -129,7 +129,7 @@ $sizeCard: clamp(250px, 90vw, 400px);
         position: absolute;
         padding: 10px 6px;
         z-index: 2;
-        font-size: clamp(1.5em, 5vw, 3em);
+        font-size: clamp(1.5em, 6vw, 2.6em);
         background-image: linear-gradient(to bottom, #264660, white);
         text-decoration: none;
         color: white;
@@ -137,6 +137,11 @@ $sizeCard: clamp(250px, 90vw, 400px);
         text-shadow: 0 2px rgba(0, 0, 0, 0.50);
         text-align: center;
         width: 90%;
+        transition: $hoverTransition;
+
+        &:hover{
+
+        }
     }
 
     .fatherFilter{

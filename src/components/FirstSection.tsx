@@ -1,5 +1,4 @@
 import { useEffect } from 'react';
-import kratosAtreus from '../assets/images/principalGame.jpg';
 import carousel from '../utils/carousel';
 
 export default function FirstSection(){

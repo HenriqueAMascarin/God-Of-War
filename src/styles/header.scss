@@ -5,7 +5,7 @@
     z-index: 2;
     height: 70px;
     width: 100%;
-    transition: $maintrasition;
+    transition: $mainTransition;
 }
 
 .close .fixedHeader{
@@ -16,7 +16,7 @@
     position: fixed;
     height: $headerHeight;
     width: 100%;
-    transition: $maintrasition;
+    transition: $mainTransition;
 }
 
 .marginHeader{
@@ -24,7 +24,7 @@
     align-items: center;
     justify-content: center;
     flex-flow: row nowrap;
-    max-width: $maxwidthcell;
+    max-width: $maxWidthCell;
     width: 100%;
     height: 100%;
     padding: 0 $marginSite;
@@ -50,8 +50,12 @@
             drop-shadow(-1px 0px 0px rgba(255, 255, 255, 0.7))
             drop-shadow(1px 0px 2px rgba(0,0,0, 0.3))
             drop-shadow(-1px 0px 2px rgba(0,0,0, 0.3));
-    transition: all .2s ease-in-out;
+    transition: $hoverTransition;
     cursor: pointer;
+
+    &:hover{
+        transform: scale(1.1);
+    }
             
     img{
        width: 54px;
@@ -72,7 +76,12 @@
     filter: drop-shadow(1px 0px 2px rgba(0,0,0, 0.3))
             drop-shadow(-1px 0px 2px rgba(0,0,0, 0.3));   
     margin-left: 5px;
+    transition: $hoverTransition;
     
+    &:hover{
+        transform: scale(1.1);
+    }
+
     path{
         fill: #4094DA;
     }
@@ -86,7 +95,7 @@
     z-index: -1;
     background-image: linear-gradient(to bottom, white 20%, #264660);
     border-radius: 0 0 14px 14px;
-    transition: $maintrasition;
+    transition: $mainTransition;
     padding: 36px 0 10px;
     transform: translateY(-100%);
 
@@ -108,7 +117,7 @@
                 color: transparent;
                 display: block;
                 font-size: 1.8em;
-                transition: all .3s ease-in-out;
+                transition: $hoverTransition;
 
                     &:hover{
                         color: blanchedalmond;
@@ -122,6 +131,11 @@
 
 .a-logo{
     margin-left: auto;
+    transition: $hoverTransition;
+
+    &:hover{
+        transform: scale(1.1);
+    }
 }
 .logo{
     width: clamp(140px,54vw,260px);
@@ -133,7 +147,7 @@
 
 .active{
     .mainNav{
-        transform: translateY(calc($headerHeight + 20px) );
+        transform: translateY(calc($headerHeight + 20px));
     }
 
     .blades{
@@ -154,7 +168,7 @@
     }
 }
 
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: $mediaMin){
     .blades{
         display: none;
     }
