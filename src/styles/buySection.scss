@@ -54,11 +54,6 @@ $sizeCard: clamp(250px, 90vw, 340px);
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
         transition: $mainTransition;
 
-        .active{
-            box-shadow: 0 0 14px #4094DA;
-            transform: scale(1.02);
-        }
-
         .card{
             background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
             width: $sizeCard;
@@ -110,7 +105,18 @@ $sizeCard: clamp(250px, 90vw, 340px);
                 font-size: 1.5em;
                 padding: 0 14px;
                 cursor: pointer;
+                transition: all .2s ease-in-out;
+
+                &:hover{
+                    transform: scale(1.04);
+                }
             }
+
+        }
+
+        .active{
+            box-shadow: $selectedItems;
+            transform: scale(1.02);
         }
     }
 }
@@ -140,13 +146,13 @@ $sizeCard: clamp(250px, 90vw, 340px);
         transition: $hoverTransition;
 
         &:hover{
-
+            transform: scale(1.04);
         }
     }
 
     .fatherFilter{
         position: relative;
-        max-width: 700px;
+        max-width: 600px;
         display: flex;
         align-items: center;
         justify-content: center;

@@ -35,7 +35,7 @@ export default function BuySection(){
                         <div className="card">
                             <img src={kratosAndAtreus} alt="Imagem da versão deluxe" className="imgCard"/>
                             <div className="mainCard">
-                                <h3>Edição padrão PS4</h3>
+                                <h3>Edição PS4</h3>
                                 <ul>
                                     <li>God of War Ragnarök PS4</li>
                                 </ul>
@@ -50,7 +50,7 @@ export default function BuySection(){
                         <div className="card">
                             <img src={allCharacters} alt="Imagem da versão deluxe" className="imgCard"/>
                             <div className="mainCard">
-                                <h3>Edição padrão PS5</h3>
+                                <h3>Edição PS5</h3>
                                 <ul>
                                     <li>God of War Ragnarök PS5</li>
                                 </ul>

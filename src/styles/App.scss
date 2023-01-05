@@ -59,5 +59,10 @@
     justify-content: center;
     border: 0;
     cursor: pointer;
+    transition: $hoverTransition;
+
+    &:hover{
+      box-shadow: 0 0px 8px #4094DA;
+    }
   }
 }

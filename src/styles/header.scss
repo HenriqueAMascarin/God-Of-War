@@ -54,7 +54,7 @@
     cursor: pointer;
 
     &:hover{
-        transform: scale(1.1);
+        transform: $scaleHover;
     }
             
     img{
@@ -79,7 +79,7 @@
     transition: $hoverTransition;
     
     &:hover{
-        transform: scale(1.1);
+        transform: $scaleHover;
     }
 
     path{
@@ -96,15 +96,16 @@
     background-image: linear-gradient(to bottom, white 20%, #264660);
     border-radius: 0 0 14px 14px;
     transition: $mainTransition;
-    padding: 36px 0 10px;
+    padding: 60px 0 10px;
+    margin-top: 60px;
     transform: translateY(-100%);
 
     ul{
         background-image: linear-gradient(to bottom, #4094DA, white);
         background-clip: text;
         -webkit-background-clip: text;
-        filter: drop-shadow(0px 0px 1px rgb(0, 0, 0))
-                drop-shadow(0px 0px 4px rgb(92, 92, 92));
+        filter: drop-shadow(0px 0px 1.8px rgb(0, 0, 0))
+                drop-shadow(0px 0px 4px rgb(255, 255, 255));
         width: 100%;        
         li{
             list-style: none;
@@ -112,16 +113,16 @@
             font-weight: bold;
             text-transform: uppercase;
             
+            
             a{
                 text-decoration: none;
                 color: transparent;
                 display: block;
-                font-size: 1.8em;
+                font-size: 2.6em;
                 transition: $hoverTransition;
-
-                    &:hover{
-                        color: blanchedalmond;
-                    }   
+                &:hover{
+                    color: $hoverText;
+                }   
                 
             }
         }
@@ -134,7 +135,7 @@
     transition: $hoverTransition;
 
     &:hover{
-        transform: scale(1.1);
+        transform: $scaleHover;
     }
 }
 .logo{
@@ -183,11 +184,11 @@
         background-image: linear-gradient(to top, transparent, transparent);
         justify-content: flex-start;
         width: fit-content;
+        margin: 0;
         margin-left: auto;
         padding: 0;
         transform: translate(0);
         height: 100%;
-        
 
         ul{
             display: inline-flex;
@@ -199,7 +200,7 @@
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
-                    font-size: 2.5em;
+                    font-size: 2.8em;
                     padding: 0 10px;
                     height: 100%;
                 }

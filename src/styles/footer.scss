@@ -14,6 +14,11 @@
         
         a{
             color: #4094DA;
+            transition: $hoverTransition;
+
+            &:hover{
+                color: $hoverText;
+            }
         }
     }
 
@@ -30,15 +35,25 @@
         }
 
         svg{
-            width: clamp(40px, 14vw, 80px);
+            width: clamp(40px, 14vw, 70px);
             height: auto;
             fill: #4094DA;
             filter: drop-shadow(-3px 2px 0 rgba(255, 255, 255, 1))
                     drop-shadow(-2px 1px 4px rgba(0, 0, 0, 0.5));
+            transition: $hoverTransition;
+
+            &:hover{
+                transform: $scaleHover;
+            }
         }
 
         .linkLogo-footer{
             margin-left: auto;
+            transition: $hoverTransition;
+
+            &:hover{
+                transform: $scaleHover;
+            }
         }
     }
     @media only screen and (max-width: 390px){
