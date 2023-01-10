@@ -1,9 +1,7 @@
-import principalGame from "../assets/images/principalGame.jpg";
 import gameplay from "../assets/images/gameplay.png";
-import kratosAndAtreus from "../assets/images/kratosAtreus.jpg";
-import allCharacters from "../assets/images/characters.jpg";
 import carousel from "../utils/carousel";
-import { useEffect } from "react";
+import  { useEffect } from "react";
+import { arrayLi } from "../utils/makeCard";
 
 export default function BuySection(){
 
@@ -31,56 +29,7 @@ export default function BuySection(){
                     <h3 className="titleEditions">Edições</h3>
 
                     <div className="carouselImgs">
-
-                        <div className="card">
-                            <img src={kratosAndAtreus} alt="Imagem da versão deluxe" className="imgCard"/>
-                            <div className="mainCard">
-                                <h3>Edição PS4</h3>
-                                <ul>
-                                    <li>God of War Ragnarök PS4</li>
-                                </ul>
-
-                                <div className="buyDiv">
-                                    <p className="priceText">R$299,90</p>
-                                    <button className="buyButton">Adicionar ao carrinho</button>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="card">
-                            <img src={allCharacters} alt="Imagem da versão deluxe" className="imgCard"/>
-                            <div className="mainCard">
-                                <h3>Edição PS5</h3>
-                                <ul>
-                                    <li>God of War Ragnarök PS5</li>
-                                </ul>
-                                <div className="buyDiv">
-                                    <p className="priceText">R$299,90</p>
-                                    <button className="buyButton">Adicionar ao carrinho</button>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div className="card">
-                            <img src={principalGame} alt="Imagem da versão deluxe" className="imgCard"/>
-                            <div className="mainCard">
-                                <h3>Edição deluxe</h3>
-                                <ul>
-                                    <li>God of War Ragnarök PS4 e PS5</li>
-                                    <li>Armadura do Valescuro</li>
-                                    <li>Traje do Valescuro (cosmético)</li>
-                                    <li>Punho de Machado do Valescuro</li>
-                                    <li>Cabos das Lâminas do Valescuro</li>
-                                    <li>Livro de arte digital da Dark Horse</li>
-                                    <li>Trilha sonora digital oficial</li>
-                                    <li>Avatares da PSN para PS4 e PS5</li>
-                                </ul>
-                                <div className="buyDiv">
-                                    <p className="priceText">R$399,50</p>
-                                    <button className="buyButton">Adicionar ao carrinho</button>
-                                </div>
-                            </div>
-                        </div>
+                        {arrayLi}
                     </div>
                 </div>
 
