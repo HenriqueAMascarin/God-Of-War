@@ -18,7 +18,7 @@ export default function BuyCard({info}: buyCard){
         if(element.target instanceof Element){
             father = element.target.closest(".card");
             let fatherId = Number(father?.id);
-            changeArray(arrayData[fatherId].info);
+            changeArray({newValue: arrayData[fatherId]});
         }
     }
 
