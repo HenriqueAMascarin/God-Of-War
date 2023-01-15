@@ -1,7 +1,7 @@
 import gameplay from "../assets/images/gameplay.png";
 import carousel from "../utils/carousel";
 import  { useEffect } from "react";
-import { arrayLi } from "../utils/makeCard";
+import BuyCard from "./BuyCard";
 
 export default function BuySection(){
 
@@ -29,7 +29,7 @@ export default function BuySection(){
                     <h3 className="titleEditions">Edições</h3>
 
                     <div className="carouselImgs">
-                        {arrayLi}
+                        <BuyCard></BuyCard>
                     </div>
                 </div>
 

@@ -112,6 +112,11 @@ $sizeCard: clamp(250px, 90vw, 340px);
                 }
             }
 
+            .buyButton.active{
+                background-color: #ffffff;
+                color: #4293DD;
+            }
+
         }
 
         .active{

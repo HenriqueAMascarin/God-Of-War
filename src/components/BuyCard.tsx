@@ -1,42 +1,51 @@
 import { arrayData } from "../utils/makeCard";
-import { changeArray } from "../utils/changeArray";
+import { useData } from "../context/Data";
 
-type buyCard = {
-    info: {
-        img: string;
-        title: string;
-        liArray: string[];
-        price: string;
-        key: string;
-    };
-}
-
-export default function BuyCard({info}: buyCard){
+export default function BuyCard() {
     let father: Element | null;
+    const { data, change } = useData();
 
-    function marketBuy(element: React.MouseEvent<HTMLButtonElement, MouseEvent>){
-        if(element.target instanceof Element){
-            father = element.target.closest(".card");
+    function classAdd(element: Element) {
+            element.classList.add("active");
+            element.textContent = "Confira o carrinho";
+    }
+
+    function marketBuy(element: React.MouseEvent<HTMLButtonElement, MouseEvent>) {
+        if (element.target instanceof Element) {
+            let button = element.target;
+
+            father = button.closest(".card");
+
+            classAdd(button);
+
             let fatherId = Number(father?.id);
-            changeArray({newValue: arrayData[fatherId]});
+            change([...data, arrayData[fatherId]]);
         }
     }
 
-    return(
-        <div className="card" key={info.key} id={info.key} >
-            <img src={info.img} alt={info.title} className="imgCard"/>
-            <div className="mainCard">
-                <h3>{info.title}</h3>
-                <ul>
-                    {info.liArray.map((element, key) => {
-                        return <li key={key}>{element}</li>
-                    })}    
-                </ul>
-                <div className="buyDiv">
-                    <p className="priceText">{info.price}</p>
-                    <button className="buyButton" onClick={(e) => marketBuy(e)}>Adicionar ao carrinho</button>
-                </div>
-            </div>
-        </div>
+
+    return (
+        <>
+            {arrayData.map((el) => {
+                return (
+                    <div className="card" key={el?.key} id={el?.key} >
+                        <img src={el?.img} alt={el?.title} className="imgCard" />
+                        <div className="mainCard">
+                            <h3>{el?.title}</h3>
+                            <ul>
+                                {el?.liArray.map((element, key) => {
+                                    return <li key={key}>{element}</li>
+                                })}
+                            </ul>
+                            <div className="buyDiv">
+                                <p className="priceText">{el?.price}</p>
+                                <button className="buyButton" onClick={(e) => marketBuy(e)}>Adicionar ao carrinho</button>
+                            </div>
+                        </div>
+                    </div>
+                )
+            })}
+        </>
+
     );
 }
