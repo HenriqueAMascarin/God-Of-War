@@ -51,7 +51,7 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
         })
         carouselItems[moveCurrent].classList.add(classActive);
 
-        carousel.style.transform = "translateX("+ currentSize + "px)";
+        carousel.style.transform = "translate3d("+ currentSize + "px, 0, 0)";
     }
 
     getPosition();
