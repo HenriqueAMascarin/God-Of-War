@@ -8,18 +8,22 @@ export default function BuyCard() {
 
     const itemsArray = localStorage.getItem("arrayData");
 
-    useEffect(() =>{
-        change(itemsArray? JSON.parse(itemsArray) : data);
+    useEffect(() => {
+        change(itemsArray ? JSON.parse(itemsArray) : data);
     },[])
-    
-    const classAdd = (element: Element) =>{
-            element.classList.add("active");
-            element.textContent = "Confira o carrinho";
+
+    useEffect(() =>{
+        dataSave(data);
+    },[data])
+
+    const classAdd = (element: Element) => {
+        element.classList.add("active");
+        element.textContent = "Confira o carrinho";
     }
 
     const marketBuy = (element: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         if (element.target instanceof Element) {
-            
+
             let button = element.target;
 
             father = button.closest(".card");
@@ -28,7 +32,6 @@ export default function BuyCard() {
 
             let fatherId = Number(father?.id);
             change([...data, arrayData[fatherId]]);
-
         }
     }
 
