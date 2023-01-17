@@ -1,6 +1,6 @@
-import { arrayData } from "../utils/makeCard";
-import { useData, dataSave } from "../context/Data";
 import { useEffect, useState } from "react";
+import { dataSave, useData } from "../../context/Data";
+import { arrayData } from "../../utils/makeCard";
 
 export default function BuyCard() {
     let father: Element | null;

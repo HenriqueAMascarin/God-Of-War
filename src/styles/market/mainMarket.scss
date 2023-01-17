@@ -1,0 +1,26 @@
+@import "../utils.scss";
+
+.mainMarket{
+    background-image: linear-gradient(to bottom, rgba(49, 96, 135, 0.7) 50%, white), url(../../assets/images/characters.jpg) ;
+    background-position: center top 30%;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .buySection{
+        flex-grow: 1;
+        padding: 0 $marginSite;
+    }
+
+    .buyDiv{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin: 0 auto;
+        text-align: center;
+        max-width: $maxWidthCell;
+        background-color: rgba(00, 00, 00, 0.42);
+    }
+}

@@ -1,4 +1,4 @@
-@import "utils.scss";
+@import "../utils.scss";
 
 .headerClass{
     position: fixed;
@@ -71,7 +71,6 @@
     }
 }
 .marketBtn{
-    border: 0;
     background-color: transparent;
     position: relative;
     transition: $hoverTransition;

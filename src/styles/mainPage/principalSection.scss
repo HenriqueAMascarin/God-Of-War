@@ -1,9 +1,9 @@
-@import "utils.scss";
+@import "../utils.scss";
 $widthVideo: clamp(210px, 74vw, 360px);
 $heigthVideo: clamp(160px, 74vw, 200px);
 
 .principalImg{
-    background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../assets/images/principalGame.jpg);
+    background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../../assets/images/principalGame.jpg);
     background-position: center top 30%;
     background-size: cover;
     background-repeat: no-repeat;

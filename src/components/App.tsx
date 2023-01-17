@@ -1,25 +1,16 @@
 import "../styles/App.scss"
-
-import FirstSection from './FirstSection';
-import InfoSection from './InfoSection';
-import BuySection from './BuySection';
-import Footer from './Footer';
-import Header from "./Header";
-import DataProvider from "../context/Data";
+import Main from "./main/Main"
+import {Routes, Route} from 'react-router-dom';
+import MarketPag from "./market/MarketPag";
 
 export default function App() {
 
   return(
     <>
-      <DataProvider>
-        <Header/>
-        <main>
-          <FirstSection/>
-          <InfoSection/>
-          <BuySection />
-        </main>
-        <Footer/>
-      </DataProvider>
+      <Routes>
+        <Route path="/" element={<Main/>} />
+        <Route path="/market" element={<MarketPag/>} />
+      </Routes>
     </>
   )
 }

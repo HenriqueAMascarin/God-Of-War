@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import carousel from '../utils/carousel';
+import carousel from '../../utils/carousel';
 
 export default function FirstSection(){
 

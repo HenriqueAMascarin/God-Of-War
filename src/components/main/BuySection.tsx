@@ -1,7 +1,7 @@
-import gameplay from "../assets/images/gameplay.png";
-import carousel from "../utils/carousel";
+import gameplay from "../../assets/images/gameplay.png";
 import  { useEffect } from "react";
 import BuyCard from "./BuyCard";
+import carousel from "../../utils/carousel";
 
 export default function BuySection(){
 

@@ -1,0 +1,11 @@
+@import "mainMarket.scss";
+
+
+.marketHeader{ 
+    .a-logo{
+        margin: 0;
+        .logo{
+            width: clamp(250px, 54vw, 280px);;
+        }
+    }
+}

@@ -1,8 +1,8 @@
-@import "utils.scss";
+@import "../utils.scss";
 $sizeCard: clamp(250px, 90vw, 340px);
 
 .buySectionDiv{
-    background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.10),rgba(0,0,0,0.10)) ,linear-gradient(to bottom, #151213, transparent 60% ,transparent 80%, #316087 96%), url(../assets/images/axe.jpg);
+    background-image: repeating-linear-gradient(to top, rgba(0,0,0,0.10),rgba(0,0,0,0.10)) ,linear-gradient(to bottom, #151213, transparent 60% ,transparent 80%, #316087 96%), url(../../assets/images/axe.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
