@@ -22,5 +22,52 @@
         text-align: center;
         max-width: $maxWidthCell;
         background-color: rgba(00, 00, 00, 0.42);
+        color: white;
+        height: 500px;
+        margin-top: 80px;
+        border-radius: 10px;
+        font-family: inter, sans-serif;
+        box-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
+
+        .buyTitle{
+            width: 100%;
+            background-color: #4094DA;
+            border-radius: 10px 10px 0 0;
+            padding: 10px $marginSite;
+            font-size: clamp(1.5em, 10vw, 2em);
+            font-weight: bold;
+            text-align: left;
+        }
+
+        .infoSections{
+            padding: 0 $marginSite;
+            height: 100%;
+            width: 100%;
+            display: flex;
+
+            .buyInfo{
+                margin: auto 0 30px;
+                width: 100%;
+                background-color: #4094DA;
+                border-radius: 10px;
+                padding: 20px $marginSite;
+
+                h3{
+                    text-align: start;
+                    font-weight: bold;
+                    font-size: 1.4em;
+                }
+
+                button{
+                    width: 100%;
+                    margin-top: 10px;
+                    font-size: 1.8em;
+                    border: 0;
+                    color: #4094DA;
+                    font-weight: bold;
+                    border-radius: 10px;
+                }
+            }
+        }
     }
 }
