@@ -11,7 +11,7 @@ export default function Header() {
     const {data} = useData();
 
     useEffect(() =>{
-        headerScroll();
+        headerScroll(60);
     }, []);
 
     //tipos da array 

@@ -38,19 +38,19 @@ export default function BuyCard() {
 
     return (
         <>
-            {arrayData.map((el) => {
+            {arrayData.map((element, key) => {
                 return (
-                    <div className="card" key={el?.key} id={el?.key} >
-                        <img src={el?.img} alt={el?.title} className="imgCard" />
+                    <div className="card" key={key} id={element?.id} >
+                        <img src={element?.img} alt={element?.title} className="imgCard" />
                         <div className="mainCard">
-                            <h3>{el?.title}</h3>
+                            <h3>{element?.title}</h3>
                             <ul>
-                                {el?.liArray.map((element, key) => {
+                                {element?.liArray.map((element, key) => {
                                     return <li key={key}>{element}</li>
                                 })}
                             </ul>
                             <div className="buyDiv">
-                                <p className="priceText">{el?.price}</p>
+                                <p className="priceText">{element?.price}</p>
                                 <button className="buyButton" onClick={(e) => marketBuy(e)}>Adicionar ao carrinho</button>
                             </div>
                         </div>

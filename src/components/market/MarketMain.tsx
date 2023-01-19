@@ -1,9 +1,15 @@
 import CardsMarket from "./CardsMarket";
 
+type data = {img: string, 
+    title: string, 
+    liArray: string[], 
+    price: string, 
+    id: string }[];
+
 export default function MarketMain() {
 
     const item = (localStorage.getItem("arrayData"));
-    let dataJson: {}[] | undefined = undefined;
+    let dataJson: data | undefined = undefined;
     item ? dataJson = JSON.parse(item) : undefined;
 
     return (
@@ -13,7 +19,7 @@ export default function MarketMain() {
                     <div className="buyTitle">
                         <h1>Faturação e pagamento</h1>
                     </div>
-                    <div className="infoSections">
+                    <div className="buySections">
                         <div>
                             {dataJson && dataJson.length > 0 ? <CardsMarket items={dataJson} /> : <p>naotem</p>}
                         </div>
@@ -22,7 +28,7 @@ export default function MarketMain() {
                         <div className="buyInfo">
                             <div>
                                 <h3>Sub-total:</h3>
-                                <p>{ }</p>
+                                <p>{  }</p>
                             </div>
 
                             <button>Fazer pedido</button>

@@ -24,7 +24,7 @@
         background-color: rgba(00, 00, 00, 0.42);
         color: white;
         height: 500px;
-        margin-top: 80px;
+        margin-top: 40px;
         border-radius: 10px;
         font-family: inter, sans-serif;
         box-shadow: 0 4px 4px rgba(00, 00, 00, 0.25);
@@ -39,14 +39,15 @@
             text-align: left;
         }
 
-        .infoSections{
+        .buySections{
             padding: 0 $marginSite;
             height: 100%;
             width: 100%;
             display: flex;
+            flex-direction: column;
 
             .buyInfo{
-                margin: auto 0 30px;
+                margin: auto 0 20px;
                 width: 100%;
                 background-color: #4094DA;
                 border-radius: 10px;
@@ -55,7 +56,7 @@
                 h3{
                     text-align: start;
                     font-weight: bold;
-                    font-size: 1.4em;
+                    font-size: 1.3em;
                 }
 
                 button{
@@ -64,6 +65,7 @@
                     font-size: 1.8em;
                     border: 0;
                     color: #4094DA;
+                    padding: 1px 0;
                     font-weight: bold;
                     border-radius: 10px;
                 }

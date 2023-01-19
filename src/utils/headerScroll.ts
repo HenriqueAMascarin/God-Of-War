@@ -1,4 +1,4 @@
-export default function headerScroll() {
+export default function headerScroll(sizeTo: number) {
     //parte de funcionalidade do header ir e voltar
     let header: Element | null = document.querySelector(".headerClass");
     let oldScroll: number;
@@ -11,9 +11,9 @@ export default function headerScroll() {
             header = document.querySelector(".headerClass");
         }
 
-        if ((window.scrollY > 60) && (!(header?.classList.contains("close"))) && ((window.scrollY > oldScroll))) {
+        if ((window.scrollY > sizeTo) && (!(header?.classList.contains("close"))) && ((window.scrollY > oldScroll))) {
             header?.classList.add("close");
-        } else if ((window.scrollY < 50) && (header?.classList.contains("close")) || (window.scrollY < oldScroll) && (header?.classList.contains("close"))) {
+        } else if ((window.scrollY < (sizeTo - 10)) && (header?.classList.contains("close")) || (window.scrollY < oldScroll) && (header?.classList.contains("close"))) {
             header?.classList.remove("close");
         }
 

@@ -8,18 +8,18 @@ type array =
         title: string;
         liArray: string[];
         price: string;
-        key: string;
+        id: string;
     })[]
 
 
 export let arrayData: array = [
     
-        { img: kratosAndAtreus, title: "Edição PS4", liArray: ["God of War Ragnarök PS4"], price: "R$299,90", key: "0" }
+        { img: kratosAndAtreus, title: "Edição PS4", liArray: ["God of War Ragnarök PS4"], price: "R$299,90", id: "0" }
     ,
 
-        { img: allCharacters, title: "Edição PS5", liArray: ["God of War Ragnarök PS5"], price: "R$299,90", key: "1" }
+        { img: allCharacters, title: "Edição PS5", liArray: ["God of War Ragnarök PS5"], price: "R$299,90", id: "1" }
     ,
     
-        { img: principalGame, title: "Edição Premium", liArray: ["God of War Ragnarök PS4 e PS5", "Armadura do Valescuro", "Traje do Valescuro (cosmético)", "Punho de Machado do Valescuro", "Cabos das Lâminas do Valescuro", "Livro de arte digital da Dark Horse", "Trilha sonora digital   oficial", "Avatares da PSN para PS4 e PS5"], price: "R$399,90", key: "2" }
+        { img: principalGame, title: "Edição Premium", liArray: ["God of War Ragnarök PS4 e PS5", "Armadura do Valescuro", "Traje do Valescuro (cosmético)", "Punho de Machado do Valescuro", "Cabos das Lâminas do Valescuro", "Livro de arte digital da Dark Horse", "Trilha sonora digital   oficial", "Avatares da PSN para PS4 e PS5"], price: "R$399,90", id: "2" }
     ,
 ]
