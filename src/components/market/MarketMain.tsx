@@ -1,16 +1,21 @@
 import CardsMarket from "./CardsMarket";
-
-type data = {img: string, 
-    title: string, 
-    liArray: string[], 
-    price: string, 
-    id: string }[];
+import { typeArray } from "../../utils/makeCard";
+import { useState } from "react";
 
 export default function MarketMain() {
-
+    
     const item = (localStorage.getItem("arrayData"));
-    let dataJson: data | undefined = undefined;
-    item ? dataJson = JSON.parse(item) : undefined;
+    let dataJson: typeArray = [];
+
+    if(item){
+        dataJson = JSON.parse(item);
+    }
+    const [arrayItems, changeItems] = useState(dataJson);
+
+    let totalPrice = 0;
+    arrayItems.map(Element =>{
+        totalPrice += Element.price;
+    })
 
     return (
         <main className="mainMarket">
@@ -20,15 +25,24 @@ export default function MarketMain() {
                         <h1>Faturação e pagamento</h1>
                     </div>
                     <div className="buySections">
-                        <div>
-                            {dataJson && dataJson.length > 0 ? <CardsMarket items={dataJson} /> : <p>naotem</p>}
+                        <div className="cardsSection">
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {<CardsMarket arrayItems={arrayItems} changeItems={changeItems}/>}
+                                </tbody>
+                            </table>
                         </div>
 
-
                         <div className="buyInfo">
-                            <div>
+                            <div className="priceDiv">
                                 <h3>Sub-total:</h3>
-                                <p>{  }</p>
+                                <p className="priceText">R${ totalPrice.toFixed(2) }</p>
                             </div>
 
                             <button>Fazer pedido</button>

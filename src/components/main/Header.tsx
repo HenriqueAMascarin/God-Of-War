@@ -44,7 +44,7 @@ export default function Header() {
     }
 
     return (
-        <header id='header' className={headerActive ? "active headerClass" : "headerClass"}>
+        <header id='header' className={headerActive ? "active headerClass" : "headerClass"} >
             <div className='fixedHeader'>
                 <div className='flexHeader'>
                     <div className='marginHeader'>

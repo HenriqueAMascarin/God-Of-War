@@ -19,7 +19,7 @@ export default function FirstSection(){
     
 
     return(
-        <section id='firstSection'>
+        <section id='firstSection' >
             <div aria-label="Kratos e Atreus contra Valquíria" className="principalImg"></div>
 
             <div className='carouselSection'>

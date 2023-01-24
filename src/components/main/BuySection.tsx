@@ -20,7 +20,7 @@ export default function BuySection(){
     }, []);
 
     return(
-        <section id="buySection">
+        <section id="buySection" >
 
             <div className="buySectionDiv">
                 <h2 className="titleBuy">Compre God of War Ragnarök</h2>

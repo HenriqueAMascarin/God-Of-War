@@ -11,11 +11,11 @@ export default function Main(){
     return(
         <>
           <DataProvider>
-            <Header/>
+            <Header />
             <main>
               <FirstSection/>
               <InfoSection/>
-              <BuySection />
+              <BuySection/>
             </main>
             <Footer/>
           </DataProvider>

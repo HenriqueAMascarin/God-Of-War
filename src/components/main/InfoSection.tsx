@@ -1,7 +1,7 @@
 
 export default function InfoSection(){
     return(
-        <section id='infoSection'>
+        <section id='infoSection' >
             <div className="flexInfo">
                 <div aria-label="Kratos e Atreus de barco olhando para direita" className='kratosBoat'></div>
 

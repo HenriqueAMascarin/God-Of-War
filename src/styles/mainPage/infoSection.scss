@@ -59,9 +59,8 @@
     }
 }
 
-@media only screen and (min-width: 1025px){
+@media only screen and (min-width: $mediaMin){
     
-
     #infoSection{
         
         .flexInfo{

@@ -1,11 +1,88 @@
 @import "../utils.scss";
 
-.cardBuy{
-    width: 100%;
-    background-color: #4094DA;
-    padding: 0 $marginSite;
+.cardsSection {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 
-    img{
-        width: 100px;
+    .cardBuy:first-of-type {
+        margin-top: 20px;
     }
+
+    .cardBuy {
+        width: 100%;
+        background-color: #4094DA;
+        padding: $marginSite;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        overflow: auto;
+
+        p{
+            font-size: 1.25em;
+        }
+
+        h2 {
+            font-size: 1.4em;
+            font-weight: bold;
+            text-align: start;
+        }
+
+        .photoDiv{
+            align-items: center;
+        }
+
+        div {
+            display: flex;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 10px;
+
+            .itemsQtd{
+                padding: 3px 8px;
+                border: 1px solid white;
+                border-radius: 100%;
+            }
+
+            .changeCard button{
+                border: 0;
+                font-size: 2em;
+                background-color: transparent;
+                color: white;
+                cursor: pointer;
+            }
+            
+            .alignBuy {
+                margin-left: auto;
+                font-weight: bold;
+            }
+        }
+
+        img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+    }
+}
+
+@media only screen and (min-width: 1025px){
+    .removeDesk{
+        display: none;
+    }
+
+    .cardsSection{
+        .cardBuy{
+            flex-direction: row;
+            align-items: center;
+
+            div:nth-child(2){
+                flex-grow: 1;
+            }
+        }
+    }
+    
 }

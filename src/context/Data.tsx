@@ -1,10 +1,14 @@
 import { createContext, useContext, useState } from "react";
+import Header from "../components/main/Header";
 
 const DataContext = createContext<{data: {}[], change: React.Dispatch<React.SetStateAction<{}[]>>}>({data: [], change: useState});
 
-export default function DataProvider({children}:any){
+type items = {
+    children: JSX.Element;
+}
+
+export default function DataProvider({children}: items){
     const [dataArray, changeData] = useState<{}[]>([]);
-    
     return(
         <DataContext.Provider 
         value={{
@@ -23,9 +27,6 @@ export function useData(){
 }
 
 export function dataSave(data:{}[]){
-    let length = data.length.toString();
-    localStorage.setItem("itemsLength", length);
-
-    let arrayData = JSON.stringify(data)
+    let arrayData = JSON.stringify(data);
     localStorage.setItem("arrayData", arrayData);
 }

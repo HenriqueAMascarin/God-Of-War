@@ -50,7 +50,7 @@ export default function BuyCard() {
                                 })}
                             </ul>
                             <div className="buyDiv">
-                                <p className="priceText">{element?.price}</p>
+                                <p className="priceText">R${element?.price}</p>
                                 <button className="buyButton" onClick={(e) => marketBuy(e)}>Adicionar ao carrinho</button>
                             </div>
                         </div>
