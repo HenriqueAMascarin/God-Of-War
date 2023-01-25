@@ -1,61 +1,145 @@
-@import "../utils.scss";
+// @import "../utils.scss";
+
+// .cardsSection {
+//     display: flex;
+//     flex-direction: column;
+//     gap: 20px;
+
+//     .cardBuy:first-of-type {
+//         margin-top: 20px;
+//     }
+
+//     .cardBuy {
+//         width: 100%;
+//         background-color: #4094DA;
+//         padding: $marginSite;
+//         border-radius: 10px;
+//         display: flex;
+//         flex-direction: column;
+//         gap: 20px;
+//         overflow: auto;
+
+//         p{
+//             font-size: 1.25em;
+//         }
+
+//         h2 {
+//             font-size: 1.4em;
+//             font-weight: bold;
+//             text-align: start;
+//             max-width: 240px;
+//         }
+
+//         .cardChildren:first-of-type{
+//             align-items: center;
+//         }
+
+//         .cardChildren {
+//             display: flex;
+//             flex-direction: row;
+//             align-items: baseline;
+//             gap: 10px;
+
+//             .itemsQtd{
+//                 padding: 3px 8px;
+//                 border: 1px solid white;
+//                 border-radius: 100%;
+//             }
+
+//             .changeItems{
+//                 border: 0;
+//                 font-size: 2em;
+//                 padding: 0 6px;
+//                 background-color: transparent;
+//                 border-radius: 100%;
+//                 color: white;
+//                 cursor: pointer;
+//             }
+
+//             .alignBuy {
+//                 margin-left: auto;
+//                 font-weight: bold;
+//             }
+//         }
+
+//         img {
+//             width: 120px;
+//             height: 120px;
+//             object-fit: cover;
+//             border-radius: 10px;
+//         }
+
+//     }
+// }
+
+// @media only screen and (min-width: 1025px){
+//     .removeDesk{
+//         display: none;
+//     }
+
+//     .cardsSection{
+
+//         .cardBuy{
+//             flex-direction: row;
+//             align-items: center;
+
+//             .cardChildren:nth-child(2){
+//                 flex-grow: 1;
+//             }
+//         }
+//     }
+
+// }
 
 .cardsSection {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    border-spacing: 0 30px;
 
-    .cardBuy:first-of-type {
-        margin-top: 20px;
+    th{
+        font-size: 1.2em;
+    }
+
+    .removeDesk {
+        display: none;
     }
 
     .cardBuy {
         width: 100%;
         background-color: #4094DA;
-        padding: $marginSite;
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
         gap: 20px;
         overflow: auto;
+        box-sizing: border-box;
 
         p{
             font-size: 1.25em;
         }
 
-        h2 {
-            font-size: 1.4em;
+        td {
+            padding: $marginSite;
+        }
+        td:last-of-type{
+            border-radius: 0 10px 10px 0;
+        }
+
+        .alignBuy {
             font-weight: bold;
-            text-align: start;
         }
 
-        .photoDiv{
-            align-items: center;
-        }
+        .photoDiv {
+            border-radius: 10px 0 0 10px;
 
-        div {
-            display: flex;
-            flex-direction: row;
-            align-items: baseline;
-            gap: 10px;
-
-            .itemsQtd{
-                padding: 3px 8px;
-                border: 1px solid white;
-                border-radius: 100%;
+            div {
+                display: flex;
+                align-items: center;
             }
 
-            .changeCard button{
-                border: 0;
-                font-size: 2em;
-                background-color: transparent;
-                color: white;
-                cursor: pointer;
-            }
-            
-            .alignBuy {
-                margin-left: auto;
+            h2 {
+                font-size: 1.4em;
                 font-weight: bold;
+                text-align: start;
+                display: inline-block;
+                max-width: 300px;
+                margin-left: 10px;
+                min-height: 100%;
             }
         }
 
@@ -64,25 +148,29 @@
             height: 120px;
             object-fit: cover;
             border-radius: 10px;
+            display: block;
         }
 
-    }
-}
-
-@media only screen and (min-width: 1025px){
-    .removeDesk{
-        display: none;
-    }
-
-    .cardsSection{
-        .cardBuy{
-            flex-direction: row;
+        .changeCard {
+            display: flex;
+            justify-content: center;
             align-items: center;
 
-            div:nth-child(2){
-                flex-grow: 1;
+            .changeItems {
+                border: 0;
+                padding: 0 6px;
+                background-color: transparent;
+                border-radius: 100%;
+                color: white;
+                cursor: pointer;
+                font-size: 2em;
+            }
+
+            .itemsQtd {
+                padding: 3px 8px;
+                border: 1px solid white;
+                border-radius: 100%;
             }
         }
     }
-    
 }

@@ -43,36 +43,34 @@ export default function CardsMarket({ arrayItems, changeItems }: data) {
                 let length = arrayItems.filter(item => item.id === element.id).length;
 
                 return (
-                    <tr key={key}>
-                        <td>
-                            <div className="cardBuy">
-                                <div className="photoDiv">
-                                    <img src={element.img} alt={element.img} />
-                                    <h2>God of war: Ragnarok - {element.title}</h2>
-                                </div>
-
-                                <div>
-                                    <p className="removeDesk">Preço:</p>
-                                    <p className="alignBuy">R${element.price.toFixed(2)}</p>
-                                </div>
-
-                                <div>
-                                    <p className="removeDesk">Quantidade</p>
-                                    <div className="alignBuy changeCard">
-                                        <button onClick={() => removeMore(element.id)}>-</button>
-                                        <p className="itemsQtd">{length}</p>
-                                        <button onClick={() => addMore(element.id)}>+</button>
-                                    </div>
-
-                                </div>
-
-                                <div>
-                                    <p className="removeDesk">Sub-total:</p>
-                                    <p className="alignBuy">R${(element.price * length).toFixed(2)}</p>
-                                </div>
+                    <tr className="cardBuy" key={key}>
+                        <td className="cardChildren photoDiv">
+                            <div>
+                                <img src={element.img} alt={element.img} />
+                                <h2>God of war: Ragnarok - {element.title}</h2>
                             </div>
                         </td>
+
+                        <td className="cardChildren">
+                            <p className="removeDesk">Preço</p>
+                            <p className="alignBuy">R${element.price.toFixed(2)}</p>
+                        </td>
+
+                        <td className="cardChildren">
+                            <p className="removeDesk">Quantidade</p>
+                            <div className="cardChildren alignBuy changeCard">
+                                <button onClick={() => removeMore(element.id)} className="changeItems">-</button>
+                                <p className="itemsQtd">{length}</p>
+                                <button onClick={() => addMore(element.id)} className="changeItems">+</button>
+                            </div>
+                        </td>
+
+                        <td className="cardChildren">
+                            <p className="removeDesk">Sub-total</p>
+                            <p className="alignBuy">R${(element.price * length).toFixed(2)}</p>
+                        </td>
                     </tr>
+
                 )
             })}
         </>
