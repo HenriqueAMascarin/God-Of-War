@@ -7,6 +7,8 @@ import DataProvider from "../../context/Data";
 import "../../styles/mainPage/mainImports.scss";
 
 export default function Main(){
+  const helo = <main> </main>
+
 
     return(
         <>

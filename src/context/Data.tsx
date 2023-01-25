@@ -4,7 +4,7 @@ import Header from "../components/main/Header";
 const DataContext = createContext<{data: {}[], change: React.Dispatch<React.SetStateAction<{}[]>>}>({data: [], change: useState});
 
 type items = {
-    children: JSX.Element;
+    children?: JSX.Element|JSX.Element[];
 }
 
 export default function DataProvider({children}: items){
