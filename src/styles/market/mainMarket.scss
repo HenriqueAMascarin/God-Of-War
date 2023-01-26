@@ -1,5 +1,33 @@
 @import "../utils.scss";
 
+.noItem{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+        margin-top: 30px;
+        filter: drop-shadow(0 0 4px black);
+        
+
+        .marketBtn:hover{
+            transform: scale(1.07);
+        }
+        svg{
+            width: 200px;
+            fill: #4094DA;
+        }
+    
+        h2{
+            font-size: clamp(2em, 7vw, 3em);
+            max-width: 400px;
+            font-weight: bold;
+            text-align: center;
+        }
+    
+    
+}
+
 .mainMarket{
     background-image: linear-gradient(to bottom, rgba(49, 96, 135, 0.7) 50%, white), url(../../assets/images/characters.jpg) ;
     background-position: center top 30%;
@@ -13,6 +41,7 @@
     .buySection{
         padding: 0 $marginSite;
         width: 100%;
+        
     }
 
     .buyDiv{
@@ -21,7 +50,7 @@
         flex-direction: column;
         margin: 0 auto 40px;
         text-align: center;
-        max-width: $maxWidthCell;
+        max-width: 724px;
         background-color: rgba(00, 00, 00, 0.42);
         color: white;
         min-height: 500px;
@@ -47,6 +76,7 @@
             display: flex;
             flex-direction: column;
             gap: 20px;
+            flex-grow: 1;
 
             .buyInfo{
                 margin: auto 0 20px;
@@ -57,33 +87,56 @@
                 
                 .priceDiv{
                     display: flex;
-                    flex-direction: row;
-                    align-items: baseline;
+                    flex-direction: column;
+                    align-items: center;
 
                     .priceText{ 
-                        margin-left: auto;
+                        // margin-left: auto;
                         font-weight: bold;
-                        font-size: 1.25em;
+                        font-size: 1.55em;
                     }
 
                     h3{
                         text-align: start;
                         font-weight: bold;
-                        font-size: 1.5em;
+                        font-size: 1.6em;
                     }
                 }
 
                 button{
                     width: 100%;
                     margin-top: 14px;
-                    font-size: 1.8em;
+                    font-size: clamp(1.9em, 8vw, 2.3em);
                     border: 0;
                     color: #4094DA;
                     padding: 1px 0;
                     font-weight: bold;
                     border-radius: 10px;
+                    cursor: pointer;
+                    transition: $hoverTransition;
+
+                    &:hover{
+                        transform: scale(1.01);
+                    }
                 }
             }
         }
+    }
+}
+
+@media only screen and (min-width: 390px){
+    .mainMarket .buyDiv .buySections .buyInfo .priceDiv{
+        flex-direction: row;
+        align-items: baseline;
+
+        .priceText{
+            margin-left: auto;
+        }
+    }
+}
+
+@media only screen and (min-width: $mediaMin) {
+    .mainMarket .buyDiv{
+        max-width: $maxWidthCell;
     }
 }

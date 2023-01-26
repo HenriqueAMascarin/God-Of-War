@@ -3,7 +3,7 @@ import { useData } from '../../context/Data';
 import headerScroll from '../../utils/headerScroll';
 import bladeChaos from '../../assets/images/chaosSword.webp';
 import logo from '../../assets/images/logo.webp';
-import { Link } from 'react-router-dom'
+import { Link } from 'react-router-dom';
 
 export default function Header() {
     // //manipulação de estado
