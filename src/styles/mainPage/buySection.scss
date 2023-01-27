@@ -61,7 +61,6 @@ $sizeCard: clamp(250px, 90vw, 340px);
             flex-direction: column;
             box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
             transition: $mainTransition;
-            border: 1px solid transparent;
         
             .imgCard{
                 border-radius: 10px 10px 0 0;
@@ -119,7 +118,6 @@ $sizeCard: clamp(250px, 90vw, 340px);
         }
 
         .active{
-            border: 3px solid #4094DA;
             transform: scale(1.02);
         }
     }

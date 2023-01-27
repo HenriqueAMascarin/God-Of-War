@@ -36,7 +36,6 @@ $heigthVideo: clamp(160px, 74vw, 200px);
         transition: $mainTransition;
         
         .active{
-            box-shadow: $selectedItems;
             transform: scale(1.02);
         }
 
