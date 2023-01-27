@@ -31,11 +31,6 @@ export default function CardsMarket({ arrayItems, changeItems }: data) {
         }
     }
 
-    useEffect(() => {
-        const array = JSON.stringify(arrayItems);
-        localStorage.setItem("arrayData", array);
-    }, [arrayItems]);
-
     return (
         <>
 

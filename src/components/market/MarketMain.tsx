@@ -1,6 +1,6 @@
 import CardsMarket from "./CardsMarket";
 import { typeArray } from "../../utils/makeCard";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from 'react-router-dom';
 
 export default function MarketMain() {
@@ -29,6 +29,11 @@ export default function MarketMain() {
             <h2>Adicione itens ao carrinho</h2>
         </div>;
 
+    useEffect(() => {
+        const array = JSON.stringify(arrayItems);
+        localStorage.setItem("arrayData", array);
+    }, [arrayItems]);
+
     return (
         <main className="mainMarket">
             <section className="buySection">
@@ -38,7 +43,7 @@ export default function MarketMain() {
                     </div>
 
                     <div className="buySections">
-                        
+                        {arrayItems.length > 0 ?
                             <table cellSpacing={0} className="cardsSection">
                                 <thead>
                                     <tr>
@@ -52,7 +57,7 @@ export default function MarketMain() {
                                     <CardsMarket arrayItems={arrayItems} changeItems={changeItems} />
                                 </tbody>
                             </table>
-                            
+                            : noItem}
 
                         <div className="buyInfo">
                             <div className="priceDiv">
@@ -65,6 +70,6 @@ export default function MarketMain() {
                     </div>
                 </div>
             </section>
-        </main >
+        </main>
     )
 }
