@@ -48,11 +48,14 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
     .carouselImgs{
         display: inline;
-
+        white-space: nowrap;
         gap: 30px;
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
         transition: $mainTransition;
         
+        .card:nth-child(2){
+            margin: 0 30px;
+        }
 
         .card{
             background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
