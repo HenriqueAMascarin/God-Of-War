@@ -47,25 +47,20 @@ $sizeCard: clamp(250px, 90vw, 340px);
     }
 
     .carouselImgs{
-        display: inline;
-        white-space: nowrap;
+        display: flex;
         gap: 30px;
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
         transition: $mainTransition;
-        
-        .card:nth-child(2){
-            margin: 0 30px;
-        }
 
         .card{
             background-image: linear-gradient(to bottom, #4094DA, #1E1E1E);
             width: $sizeCard;
             border-radius: 10px 10px 4px 4px;
             margin: 0px 0 20px;
-            display: inline-block;
+            display: inline-flex;
+            flex-direction: column;
             box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
             transition: $mainTransition;
-            min-height: 380px;
         
             .imgCard{
                 border-radius: 10px 10px 0 0;
@@ -73,7 +68,10 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
             .mainCard{
                 padding: 0 20px;
-                display: inline-block;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-start;
             }
             h3{
                 font-size: 32px;
@@ -119,10 +117,10 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
         }
 
-        .active{
-            box-shadow: $selectedItems;
-            transform: scale(1.02);
-        }
+        // .active{
+        //     box-shadow: $selectedItems;
+        //     transform: scale(1.02);
+        // }
     }
 }
 
