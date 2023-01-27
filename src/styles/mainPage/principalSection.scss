@@ -34,10 +34,6 @@ $heigthVideo: clamp(160px, 74vw, 200px);
         flex-shrink: 0;
         margin: 60px 0 30px calc($widthVideo * 2 + 60px);
         transition: $mainTransition;
-        
-        .active{
-            transform: scale(1.02);
-        }
 
         iframe{
             border-radius: 7px;
