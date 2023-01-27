@@ -117,10 +117,10 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
         }
 
-        // .active{
-        //     box-shadow: $selectedItems;
-        //     transform: scale(1.02);
-        // }
+        .active{
+            box-shadow: $selectedItems;
+            
+        }
     }
 }
 
