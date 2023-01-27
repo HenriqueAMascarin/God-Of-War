@@ -47,7 +47,8 @@ $sizeCard: clamp(250px, 90vw, 340px);
     }
 
     .carouselImgs{
-        display: flex;
+        display: inline;
+
         gap: 30px;
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
         transition: $mainTransition;
@@ -69,7 +70,6 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
             .mainCard{
                 padding: 0 20px;
-                
                 display: inline-block;
             }
             h3{
