@@ -118,7 +118,7 @@ $sizeCard: clamp(250px, 90vw, 340px);
         }
 
         .active{
-            box-shadow: $selectedItems;
+            filter: drop-shadow($selectedItems);
             transform: scale(1.02);
         }
     }
