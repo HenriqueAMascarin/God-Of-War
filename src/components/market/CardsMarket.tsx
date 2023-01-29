@@ -1,6 +1,4 @@
-import { useEffect } from "react";
-import { arrayData } from "../../utils/makeCard";
-import { typeArray } from "../../utils/makeCard";
+import { arrayData, typeArray } from "../../utils/makeCard";
 
 type data = {
     arrayItems: typeArray,

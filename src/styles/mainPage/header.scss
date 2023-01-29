@@ -59,6 +59,7 @@
             
     img{
        width: 54px;
+       min-height: 50px;
        transition: all .2s ease-in-out;
     }
 
@@ -159,6 +160,7 @@
 }
 .logo{
     width: clamp(140px,54vw,260px);
+    height: 100%;
     filter: drop-shadow(1px 0px 0px rgba(255, 255, 255, 1))
             drop-shadow(-1px 0px 0px rgba(255, 255, 255, 0.7))
             drop-shadow(1px 0px 2px rgba(0,0,0, 0.3))

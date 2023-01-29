@@ -1,5 +1,4 @@
 import { createContext, useContext, useState } from "react";
-import Header from "../components/main/Header";
 
 const DataContext = createContext<{data: {}[], change: React.Dispatch<React.SetStateAction<{}[]>>}>({data: [], change: useState});
 

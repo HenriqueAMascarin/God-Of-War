@@ -1,6 +1,6 @@
-import kratosAndAtreus from "../assets/images/kratosAtreus.jpg";
-import allCharacters from "../assets/images/characters.jpg";
-import principalGame from "../assets/images/principalGame.jpg";
+import kratosAndAtreus from "../assets/images/kratosAtreus.webp";
+import allCharacters from "../assets/images/characters.webp";
+import principalGame from "../assets/images/principalGame.webp";
 
 export type typeArray = 
     ({
