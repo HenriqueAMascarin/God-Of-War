@@ -1,6 +1,6 @@
 @import "../utils.scss";
 $widthVideo: clamp(230px, 74vw, 360px);
-$heigthVideo: clamp(140px, 50vw, 200px);
+$heigthVideo: clamp(130px, 50vw, 200px);
 
 .principalImg {
     background-image: linear-gradient(to bottom, transparent 60%, #1E1E1E 96%), url(../../assets/images/principalGame.webp);
