@@ -13,6 +13,10 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
 ## Sobre
 
+### Screenshot
+
+![](/src/assets/images/screenshot/cartazGit.jpg)
+
 ### O que aprendi?
 
  Aprendi muito, ainda mais com as novas tecnologias que descobri no caminho e também que serão importantes na minha carreira.
@@ -21,9 +25,6 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
  Busco me aperfeiçoar, principalmente as habilidades e também conseguir a tão sonhada vaga que eu tanto desejo!
 
-### Screenshot
-
-![](/src/assets/images/screenshot/cartazGit.jpg)
 
 ### Links
 
