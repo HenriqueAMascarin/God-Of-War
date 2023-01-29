@@ -6,13 +6,20 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
 - [Sobre](#Sobre)
   - [Screenshot](#screenshot)
-  - [Links](#links)
-  - [Tecnologias usadas](#Tecnologias-usadas)
   - [O que aprendi?](#O-que-aprendi?)
   - [O que busco no futuro?](#O-que-busco-no-futuro?)
-- [Author](#Autor)
+  - [Links](#links)
+- [Tecnologias usadas](#Tecnologias-usadas)
 
 ## Sobre
+
+### O que aprendi?
+
+ Aprendi muito, ainda mais com as novas tecnologias que descobri no caminho e também que serão importantes na minha carreira.
+
+### O que busco no futuro?
+
+ Busco me aperfeiçoar, principalmente as habilidades e também conseguir a tão sonhada vaga que eu tanto desejo!
 
 ### Screenshot
 
@@ -23,6 +30,8 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 - URL do site: https://godofwar-shop.vercel.app.
 
 - Design no Figma: https://www.figma.com/proto/fFnrpY4zrUWgRxo06TTjs1/god-of-war?page-id=0%3A1&node-id=1%3A4&viewport=384%2C445%2C1.13&scaling=scale-down&starting-point-node-id=1%3A4.
+
+- Meu portfólio - https://henriqueamascarin.vercel.app.
 
 ### Tecnologias usadas
 
@@ -38,15 +47,3 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 - Typescript.
 - Sass.
 - Vite.
-
-### O que aprendi?
-
- Aprendi muito, ainda mais com as novas tecnologias que descobri no caminho e também que serão importantes na minha carreira.
-
-### O que busco no futuro?
-
- Busco me aperfeiçoar, principalmente as habilidades e também conseguir a tão sonhada vaga que eu tanto desejo!
-
-## Autor
-
-- Portfólio - https://henriqueamascarin.vercel.app.
