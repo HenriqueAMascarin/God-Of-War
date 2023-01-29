@@ -9,7 +9,7 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
   - [O que aprendi?](#O-que-aprendi?)
   - [O que busco no futuro?](#O-que-busco-no-futuro?)
   - [Links](#links)
-- [Tecnologias usadas](#Tecnologias-usadas)
+  - [Tecnologias usadas](#Tecnologias-usadas)
 
 ## Sobre
 
