@@ -55,9 +55,9 @@ export default function CardsMarket({ arrayItems, changeItems }: data) {
                             <div className="flexCard">
                                 <p className="removeDesk">Quantidade</p>
                                 <div className="cardChildren alignBuy changeCard">
-                                    <button onClick={() => removeMore(element.id)} className="changeItems">-</button>
+                                    <button onClick={() => removeMore(element.id)} className="changeItems" aria-label="remover item">-</button>
                                     <p className="itemsQtd">{length}</p>
-                                    <button onClick={() => addMore(element.id)} className="changeItems">+</button>
+                                    <button onClick={() => addMore(element.id)} className="changeItems" aria-label="adicionar item">+</button>
                                 </div>
                             </div>
 

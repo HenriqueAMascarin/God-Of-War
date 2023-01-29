@@ -15,7 +15,7 @@ export default function MarketHeader() {
                 <div className='flexHeader'>
                     <div className='marginHeader'>
                         <Link to="/" className='a-logo'>
-                            <img src={logo} alt="God of War logo" className='logo' />
+                            <img src={logo} alt="God of War logo" className='logo' aria-label="clique para voltar ao início"/>
                         </Link>
                     </div>
                 </div>
