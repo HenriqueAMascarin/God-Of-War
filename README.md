@@ -25,7 +25,6 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
  Busco me aperfeiçoar, principalmente as habilidades e também conseguir a tão sonhada vaga que eu tanto desejo!
 
-
 ### Links
 
 - URL do site: https://godofwar-shop.vercel.app.
