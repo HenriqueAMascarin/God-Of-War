@@ -31,7 +31,7 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
 - Design no Figma: https://www.figma.com/proto/fFnrpY4zrUWgRxo06TTjs1/god-of-war?page-id=0%3A1&node-id=1%3A4&viewport=384%2C445%2C1.13&scaling=scale-down&starting-point-node-id=1%3A4.
 
-- Meu portfólio - https://henriqueamascarin.vercel.app.
+- Meu portfólio: https://henriqueamascarin.vercel.app.
 
 ### Tecnologias usadas
 
