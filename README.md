@@ -35,14 +35,14 @@ Projeto de e-commerce com a temática do jogo God of War: Ragnarök, com design 
 
 ### Tecnologias usadas
 
-- Typescript.
 - Sass.
 - Vite.
 - React Js.
+- Typescript.
 - React Hooks.
 - React Context.
 - Responsividade.
 - React Router Dom.
-- ARIA Accessibility.
+- ARIA acessibilidade.
 - Uso de branches do GIT.
 - Local Storage para salvar os dados.
