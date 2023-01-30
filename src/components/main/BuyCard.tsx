@@ -10,15 +10,15 @@ export default function BuyCard() {
 
     useEffect(() => {
         change(itemsArray ? JSON.parse(itemsArray) : data);
-    },[])
+    }, [])
 
-    useEffect(() =>{
+    useEffect(() => {
         dataSave(data);
-    },[data])
+    }, [data])
 
     const classAdd = (element: Element) => {
         element.classList.add("active");
-        element.textContent = "Confira o carrinho";
+        element.textContent = "Produto adicionado";
     }
 
     const marketBuy = (element: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {

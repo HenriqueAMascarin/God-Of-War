@@ -3,7 +3,7 @@ export default function InfoSection(){
     return(
         <section id='infoSection' >
             <div className="flexInfo">
-                <div title="Kratos e Atreus de barco olhando para direita" role={"img"} className='kratosBoat'></div>
+                <div aria-label="Kratos e Atreus de barco olhando para direita" role={"img"} className='kratosBoat'></div>
 
                 <div className='info-godOfWar'>
                     <h1>Embarque com Kratos e Atreus em uma jornada épica emocionante 
