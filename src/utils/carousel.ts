@@ -8,7 +8,7 @@ type carousel = {
     classActive: string,
 }
 
-export default function carousel({father,carouselObject, items, buttonClass, initialItem, leftGap, classActive}:carousel){
+export default function carousel({father, carouselObject, items, buttonClass, initialItem, leftGap, classActive}:carousel){
     const carouselItems = document.querySelectorAll(father + " " + carouselObject + " " + items);
     const carousel = document.querySelector(father + " " + carouselObject) as HTMLElement;
     const buttons = document.querySelectorAll(father + " " + buttonClass);
@@ -35,13 +35,11 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
         setPos(moveCurrent);
     }
 
-    let lastItem:number;
     let currentSize:number = 0;
     function setPos(moveCurrent:number){
         let sizeItem = carouselItems[0].clientWidth + leftGap;
         currentSize = -(sizeItem * moveCurrent);
         
-        lastItem = moveCurrent;
         styleItems(currentSize, moveCurrent);
     }
    
@@ -55,7 +53,7 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
     }
 
     getPosition();
-    
+
     //resize fix
     let windowOld = window.innerWidth;
     function resizeDo(){
@@ -70,5 +68,4 @@ export default function carousel({father,carouselObject, items, buttonClass, ini
         clearTimeout(time);
         time = setTimeout(resizeDo, 400);
     })
-    
 }
