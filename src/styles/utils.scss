@@ -1,44 +1,48 @@
 $marginSite: 14px;
 $maxWidthCell: 1024px;
 $headerHeight: 90px;
-$mainTransition: all .4s ease-in-out;
-$hoverTransition: all .2s ease-in-out;
+$mainTransition: all 0.4s ease-in-out;
+$hoverTransition: all 0.2s ease-in-out;
 $mediaMin: 1024px;
 $scaleHover: scale(1.1);
-$hoverText: #D92211;
+$hoverText: #d92211;
 
-.buttons{
-    display: flex;
-    flex-direction: row;
+.buttons {
+  display: flex;
+  flex-direction: row;
+  height: 54px;
+  margin: 0px 0 30px;
+  gap: 20px;
+
+  svg {
+    filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 1));
+    width: 30px;
+    height: 30px;
+  }
+
+  .rotate-arrow {
+    transform: rotateY(180deg);
+  }
+
+  .changeBtn {
+    width: 54px;
     height: 54px;
-    margin: 0px 0 30px;
-    gap: 20px;
-  
-    svg{
-      filter: drop-shadow(0 0px 3px rgba(0, 0, 0, 1));
-      width: 30px;
-      height: 30px;
-    }
-  
-    .rotate-arrow{
-      transform: rotateY(180deg);
-    }
-      
-    .changeBtn{
-      width: 54px;
-      height: 54px;
-      border-radius: 100%;
-      background-color: #4094DA;
-      box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 0;
-      cursor: pointer;
-      transition: $hoverTransition;
-  
-      &:hover{
-        box-shadow: 0 0px 8px #4094DA;
-      }
+    border-radius: 100%;
+    background-color: #4094da;
+    box-shadow: 0 0px 8px rgba(0, 0, 0, 1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    cursor: pointer;
+    transition: $hoverTransition;
+
+    &:hover {
+      box-shadow: 0 0px 8px #4094da;
     }
   }
+
+  @media only screen and (min-width: 1065px) {
+    opacity: 0;
+  }
+}

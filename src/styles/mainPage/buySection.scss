@@ -48,7 +48,7 @@ $sizeCard: clamp(250px, 90vw, 340px);
 
     .carouselImgs{
         display: flex;
-        gap: 30px;
+        gap: 20px;
         margin: 20px 0 30px calc($sizeCard * 2 + 60px);
         transition: $mainTransition;
 
